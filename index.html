@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar-controls">
+        <select id="monthSelect"></select>
+        <select id="yearSelect"></select>
+        <button onclick="addMeeting()">Add Meeting</button>
+    </div>
+    
+    <div class="calendar">
+        <h2>Calendar</h2>
+        <div id="calendar"></div>
+    </div>
+
+    <div id="popup" class="popup">
+        <form id="meetingForm">
+            <h2>Add/Edit Meeting</h2>
+            <input type="hidden" id="meetingId" name="meeting_id">
+            <input type="hidden" id="meetingDate" name="meeting_date">
+            <label for="personName">Person Name:</label>
+            <input type="text" id="personName" name="person_name" required>
+            <label for="meetingTime">Time of Meeting:</label>
+            <input type="time" id="meetingTime" name="meeting_time" required>
+            <label for="purpose">Purpose of Meeting:</label>
+            <textarea id="purpose" name="purpose" required></textarea>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+                <option value="postponed">Postponed</option>
+            </select>
+            <label for="notes">Discussion Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+            <label for="assignedTo">Meeting Assigned To:</label>
+            <input type="text" id="assignedTo" name="assigned_to" required>
+            <button type="submit">Save</button>
+            <button type="button" onclick="closePopup()">Cancel</button>
+        </form>
+    </div>
+
+    <div id="meetings-list" class="meetings-list"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

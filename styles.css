@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.calendar-controls {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendar-controls select,
+.calendar-controls button {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.day {
+    width: 14%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup label {
+    margin-bottom: 5px;
+}
+
+.popup input,
+.popup textarea,
+.popup button,
+.popup select {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.popup button {
+    padding: 10px;
+}
+
+.meetings-list {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.meetings-list h3 {
+    margin-top: 0;
+}
+
+.meetings-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.meetings-list li {
+    margin-bottom: 10px;
+}
+
+.meetings-list button {
+    margin-left: 10px;
+}
